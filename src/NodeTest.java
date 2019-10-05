@@ -19,8 +19,7 @@ class NodeTest {
         root.right.right = new Node<>("This is the 2nd level right node.");
 
         assertEquals("This is the root node.", root.data, "Assert that the tree's " +
-                "root node data is as " +
-                "initialised");
+                "root node data is as initialised");
         assertEquals("This is the left node.", root.left.data, "Assert that the tree's " +
                 "left node data is as initialised");
         assertEquals("This is the right node.", root.right.data, "Assert that the tree's " +

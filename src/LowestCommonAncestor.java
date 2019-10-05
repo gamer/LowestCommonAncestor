@@ -1,7 +1,7 @@
 public class LowestCommonAncestor {
     public static void main(String[] args) {
     }
-    public Node findLCA(Node root, Node n1, Node n2) {
+    public static Node findLCA(Node root, Node n1, Node n2) {
         if (root == null)
             return null;
 
