@@ -14,17 +14,17 @@ class NodeTest {
     @Test
     public void initTree() {
         Node<String> root = new Node<>("This is the root node.");
-        root.left = new Node<>("This is the left node.");
-        root.right = new Node<>("This is the right node.");
-        root.right.right = new Node<>("This is the 2nd level right node.");
+        root.addLeft(new Node<>("This is the left node."));
+        root.addRight(new Node<>("This is the right node."));
+        root.getRight().addRight(new Node<>("This is the 2nd level right node."));
 
         assertEquals("This is the root node.", root.data, "Assert that the tree's " +
                 "root node data is as initialised");
-        assertEquals("This is the left node.", root.left.data, "Assert that the tree's " +
+        assertEquals("This is the left node.", root.getLeft().data, "Assert that the tree's " +
                 "left node data is as initialised");
-        assertEquals("This is the right node.", root.right.data, "Assert that the tree's " +
+        assertEquals("This is the right node.", root.getRight().data, "Assert that the tree's " +
                 "right node data is as initialised");
-        assertEquals("This is the 2nd level right node.", root.right.right.data, "Assert that the tree's " +
+        assertEquals("This is the 2nd level right node.", root.getRight().getRight().data, "Assert that the tree's " +
                 "2nd level right node data is as initialised");
     }
 }
